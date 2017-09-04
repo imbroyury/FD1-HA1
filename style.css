@@ -1,0 +1,34 @@
+body {
+    font-family: Calibri, sans-serif;
+    background-color: lightgrey;
+}
+
+#photo {
+    border: 7px solid #6f0008;
+    /* size of #photo div corresponds to size of the image */
+    height: 335px;
+    width: 720px;
+    background-image: url("img/tesla.jpg");
+}
+
+#overlay {
+    /* #overlay is not displayed on page load */
+    display: none;
+    height: 15%;
+    width: 100%;
+    /* relative positioning to allow moving the element with "top" */
+    position: relative;
+    top: 85%;
+    background: rgba(111, 0, 8, 0.6);
+    font-weight: 600;
+}
+
+/* #overlay is displayed when #photo is hovered */
+#photo:hover #overlay {
+    /* display: flex for clean centering text in the overlay div */
+    display: flex;
+    /* horizontal alignment */
+    justify-content: center;
+    /* vertical alignment */
+    align-items: center;
+}
